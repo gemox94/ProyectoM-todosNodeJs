@@ -1,0 +1,20 @@
+{
+  "name": "proyectometodos",
+  "authors": [
+    "gemox94 <gerardo.mx.rz@gmail.com>"
+  ],
+  "description": "First project of numerical methods subject",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "mathjs": "^3.9.1"
+  }
+}

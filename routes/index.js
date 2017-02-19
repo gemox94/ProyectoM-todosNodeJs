@@ -7,28 +7,28 @@ router.get('/',function(req, res, next) {
 });
 
 router.get('/biseccion',function(req,res,next){
-	res.render('biseccion');
+	res.render('methods/biseccion');
 });
 router.get('/polinomios',function(req,res,next){
-	res.render('polinomios');
+	res.render('methods/polinomios');
 });
 router.get('/secante',function(req,res,next){
-	res.render('secante');
+	res.render('methods/secante');
 });
 router.get('/reglaF',function(req,res,next){
-	res.render('reglaF');
+	res.render('methods/reglaF');
 });
 router.get('/newton',function(req,res,next){
-	res.render('newton');
+	res.render('methods/newton');
 });
 router.get('/newtonM',function(req,res,next){
-	res.render('newtonM');
+	res.render('methods/newtonM');
 });
 router.get('/muller',function(req,res,next){
-	res.render('muller');
+	res.render('methods/muller');
 });
 router.get('/steffensen',function(req,res,next){
-	res.render('steffensen');
+	res.render('methods/steffensen');
 });
 
 

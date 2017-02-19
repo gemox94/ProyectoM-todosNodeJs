@@ -1,47 +1,53 @@
-<div class="row">
+<div class="row" style="margin-top: 20px;" ng-controller="biseccionController">
 
-    <div class="col m4">
+    <div class="col m3">
         <div class="input-field">
-            <input id="formula" type="text">
-            <label for="formula">Formula</label>
+            <input id="formule" type="text" ng-model="formule">
+            <label for="formule">Formula</label>
         </div>
 
         <div class="row">
-            <div class="col sm6">
+            <div class="col s6">
                 <div class="input-field">
-                    <input id="pointA" type="text">
+                    <input id="pointA" type="text" ng-model="pointA">
                     <label for="pointA">Punto A</label>
                 </div>
             </div>
-            <div class="col sm6">
+            <div class="col s6">
                 <div class="input-field">
-                    <input id="pointB" type="text">
+                    <input id="pointB" type="text" ng-model="pointB">
                     <label for="pointB">Punto B</label>
                 </div>
             </div>
         </div>
 
         <div class="row">
-            <div class="col sm6">
+            <div class="col s6">
                 <div class="input-field">
-                    <input id="maxIter" type="text">
+                    <input id="maxIter" type="text" ng-model="maxIter">
                     <label for="maxIter">Max. Iteraciones</label>
                 </div>
             </div>
-            <div class="col sm6">
+            <div class="col s6">
                 <div class="input-field">
-                    <input id="tolerancia" type="text">
+                    <input id="tolerancia" type="text" ng-model="tolerancia">
                     <label for="tolerancia">Tolerancia</label>
                 </div>
             </div>
         </div>
 
         <div class="row">
-            <div class="col sm6">
+            <div class="col s6">
                 <a class="waves-effect waves-light btn">Gráficar</a>
             </div>
-            <div class="col sm6">
-                <a class="waves-effect waves-light btn">Calcular</a>
+            <div class="col s6">
+                <a class="waves-effect waves-light btn" ng-click="calculate()">Calcular</a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s12">
+                <a href="#" data-activates="slide-out" class="button-collapse waves-effect waves-light btn" style="width: 100%;">Menú</a>
             </div>
         </div>
 
@@ -64,7 +70,7 @@
 
                 <tbody>
                 <tr ng-repeat="result in results">
-                    <td>[[result.a]}</td>
+                    <td>[[result.a]]</td>
                     <td>[[result.b]]</td>
                     <td>[[result.PM]]</td>
                     <td>[[result.Fa]]</td>
@@ -81,3 +87,4 @@
 
 
 </div>
+
