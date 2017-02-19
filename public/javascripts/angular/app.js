@@ -1,3 +1,6 @@
 (function () {
-    angular.module('metodos', []);
+    angular.module('metodos', [], function($interpolateProvider){
+    	$interpolateProvider.startSymbol('[[');
+    	$interpolateProvider.endSymbol(']]');
+    });
 })();
