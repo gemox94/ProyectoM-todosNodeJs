@@ -1,49 +1,83 @@
 <div class="row">
 
-    <div class="col-md4">
+    <div class="col m4">
         <div class="input-field">
             <input id="formula" type="text">
             <label for="formula">Formula</label>
         </div>
+
+        <div class="row">
+            <div class="col sm6">
+                <div class="input-field">
+                    <input id="pointA" type="text">
+                    <label for="pointA">Punto A</label>
+                </div>
+            </div>
+            <div class="col sm6">
+                <div class="input-field">
+                    <input id="pointB" type="text">
+                    <label for="pointB">Punto B</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col sm6">
+                <div class="input-field">
+                    <input id="maxIter" type="text">
+                    <label for="maxIter">Max. Iteraciones</label>
+                </div>
+            </div>
+            <div class="col sm6">
+                <div class="input-field">
+                    <input id="tolerancia" type="text">
+                    <label for="tolerancia">Tolerancia</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col sm6">
+                <a class="waves-effect waves-light btn">Gráficar</a>
+            </div>
+            <div class="col sm6">
+                <a class="waves-effect waves-light btn">Calcular</a>
+            </div>
+        </div>
+
     </div>
 
     <div class="row">
-        <div class="col sm6">
-            <div class="input-field">
-                <input id="pointA" type="text">
-                <label for="pointA">Punto A</label>
-            </div>
+
+        <div class="col m8">
+            <table class="striped">
+                <thead>
+                <tr>
+                    <th>a</th>
+                    <th>b</th>
+                    <th>PM</th>
+                    <th>f(a)</th>
+                    <th>f(b)</th>
+                    <th>f(PM)</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr ng-repeat="result in results">
+                    <td>[[result.a]}</td>
+                    <td>[[result.b]]</td>
+                    <td>[[result.PM]]</td>
+                    <td>[[result.Fa]]</td>
+                    <td>[[result.Fb]]</td>
+                    <td>[[result.Fpm]]</td>
+                </tr>
+                </tbody>
+
+            </table>
         </div>
-        <div class="col sm6">
-            <div class="input-field">
-                <input id="pointB" type="text">
-                <label for="pointB">Punto B</label>
-            </div>
-        </div>
+
     </div>
 
-    <div class="row">
-        <div class="col sm6">
-            <div class="input-field">
-                <input id="maxIter" type="text">
-                <label for="maxIter">Max. Iteraciones</label>
-            </div>
-        </div>
-        <div class="col sm6">
-            <div class="input-field">
-                <input id="tolerancia" type="text">
-                <label for="tolerancia">Tolerancia</label>
-            </div>
-        </div>
-    </div>
 
-    <div class="row">
-        <div class="col sm6">
-            <a class="waves-effect waves-light btn">Gráficar</a>
-        </div>
-        <div class="col sm6">
-            <a class="waves-effect waves-light btn"></a>
-        </div>
-    </div>
 
 </div>
