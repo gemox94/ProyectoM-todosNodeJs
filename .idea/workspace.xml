@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="305ac1ab-8e97-45ac-976a-4bd1e1bf273c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/npm-debug.log" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/index.js" afterPath="$PROJECT_DIR$/routes/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/home.handlebars" afterPath="$PROJECT_DIR$/views/home.handlebars" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/methods/biseccion.handlebars" afterPath="$PROJECT_DIR$/views/methods/biseccion.handlebars" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/partials/script_dependencies.handlebars" afterPath="$PROJECT_DIR$/views/partials/script_dependencies.handlebars" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/partials/sidebar.handlebars" afterPath="$PROJECT_DIR$/views/partials/sidebar.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -767,12 +759,12 @@
       <updated>1487494494077</updated>
       <workItem from="1487494505117" duration="103000" />
       <workItem from="1487494620797" duration="395000" />
-      <workItem from="1487523448520" duration="11460000" />
+      <workItem from="1487523448520" duration="11523000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11958000" />
+    <option name="totallyTimeSpent" value="12021000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1920" height="1056" extended-state="6" />
