@@ -1,8 +1,8 @@
 (function(){
     angular.module('metodos')
         .controller('newtonModificadoController', newtonModificadoController);
-    
-    function newtonModificacoController($scope) {
+
+    function newtonModificadoController($scope) {
 
         $scope.calculate = function(){
             $scope.results = [];
@@ -10,15 +10,20 @@
 
             var func = math.parse($scope.formule, scope);
             var diff = math.parse(nerdamer('diff('+ func +',x)').text(), scope);
+            var diff2_text = nerdamer('diff('+ func +',x)').text();
+            var diff2 = math.parse(nerdamer('diff('+diff2_text+',x)').text(), scope);
             var funcCompiled = func.compile();
             var diffCompiled = diff.compile();
+            var diff2Compiled = diff2.compile();
 
             var result = 0;
             var i=0;
             var x1 = 0;
             do{
                 x1 = scope.x;
-                scope.x = Number(scope.x) - math.divide(funcCompiled.eval(scope),diffCompiled.eval(scope));
+                scope.x = Number(scope.x) - math.divide(
+                  (funcCompiled.eval(scope)*diffCompiled.eval(scope)),
+                  (math.square(diffCompiled.eval(scope))-(funcCompiled.eval(scope)*diff2Compiled.eval(scope))));
                 $scope.results.push({
                     Xn : x1,
                     fx : func.toString(),

@@ -1,0 +1,87 @@
+<div class="row" style="margin-top: 20px;" ng-controller="steffensenController">
+
+    <div class="col m3">
+        <div class="input-field">
+            <input id="formule" type="text" ng-model="formule">
+            <label for="formule">Formula</label>
+        </div>
+
+        <div class="row">
+            <div class="col s6 offset-s3">
+                <div class="input-field">
+                    <input id="pointA" type="text" ng-model="initialX">
+                    <label for="pointA">X inicial</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s6">
+                <div class="input-field">
+                    <input id="maxIter" type="text" ng-model="maxIter">
+                    <label for="maxIter">Max. Iteraciones</label>
+                </div>
+            </div>
+            <div class="col s6">
+                <div class="input-field">
+                    <input id="tolerancia" type="text" ng-model="tolerancia">
+                    <label for="tolerancia">Tolerancia</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s6">
+                <a class="waves-effect waves-light btn">Gráficar</a>
+            </div>
+            <div class="col s6">
+                <a class="waves-effect waves-light btn" ng-click="calculate()">Calcular</a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s12">
+                <a href="#" data-activates="slide-out" class="button-collapse waves-effect waves-light btn" style="width: 100%;">Menú</a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s12 right-align">
+                <a class="btn-floating btn-large waves-effect waves-light teal darken-1" ng-click="clear_results()"><i class="material-icons">delete</i></a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col m8">
+            <table class="striped">
+                <thead>
+                <tr>
+                    <th>Index</th>
+                    <th>P0</th>
+                    <th>P1</th>
+                    <th>P2</th>
+                    <th>P</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr ng-repeat="result in results">
+                    <td>[[$index+1]]</td>
+                    <td>[[result.p0]]</td>
+                    <td>[[result.p1]]</td>
+                    <td>[[result.p2]]</td>
+                    <td>[[result.p]]</td>
+                </tr>
+                </tbody>
+
+            </table>
+        </div>
+
+    </div>
+
+
+
+</div>
