@@ -16,7 +16,7 @@ router.get('/secante',function(req,res,next){
 	res.render('methods/secante');
 });
 router.get('/reglaF',function(req,res,next){
-	res.render('methods/reglaF');
+	res.render('methods/reglaFalsa');
 });
 router.get('/newton',function(req,res,next){
 	res.render('methods/newton');

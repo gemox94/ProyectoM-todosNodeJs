@@ -7,16 +7,22 @@
         </div>
 
         <div class="row">
-            <div class="col s6">
+            <div class="col s4">
                 <div class="input-field">
-                    <input id="pointA" type="text" ng-model="pointA">
-                    <label for="pointA">Punto A</label>
+                    <input id="x0" type="text" ng-model="x0">
+                    <label for="x0">X0</label>
                 </div>
             </div>
-            <div class="col s6">
+            <div class="col s4">
                 <div class="input-field">
-                    <input id="pointB" type="text" ng-model="pointB">
-                    <label for="pointB">Punto B</label>
+                    <input id="x1" type="text" ng-model="x1">
+                    <label for="x1">X1</label>
+                </div>
+            </div>
+            <div class="col s4">
+                <div class="input-field">
+                    <input id="x2" type="text" ng-model="x2">
+                    <label for="x2">X2</label>
                 </div>
             </div>
         </div>
@@ -60,24 +66,18 @@
                 <thead>
                 <tr>
                     <th>Index</th>
-                    <th>a</th>
-                    <th>b</th>
-                    <th>PM</th>
-                    <th>f(a)</th>
-                    <th>f(b)</th>
-                    <th>f(PM)</th>
+                    <th>X0</th>
+                    <th>X1</th>
+                    <th>X2</th>
                 </tr>
                 </thead>
 
                 <tbody>
                 <tr ng-repeat="result in results">
                     <td>[[$index+1]]</td>
-                    <td>[[result.a]]</td>
-                    <td>[[result.b]]</td>
-                    <td>[[result.PM]]</td>
-                    <td>[[result.Fa]]</td>
-                    <td>[[result.Fb]]</td>
-                    <td>[[result.Fpm]]</td>
+                    <td>[[result.x0]]</td>
+                    <td>[[result.x1]]</td>
+                    <td>[[result.x2]]</td>
                 </tr>
                 </tbody>
 
