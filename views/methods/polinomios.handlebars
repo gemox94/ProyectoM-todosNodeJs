@@ -59,21 +59,21 @@
             <table class="striped">
                 <thead>
                 <tr>
-                    <th>Index</th>
-                    <th>Xn</th>
-                    <th>f(x)</th>
-                    <th>f'(x)</th>
-                    <th>Xn+1</th>
+                    <th>Coef1</th>
+                    <th>Results1</th>
+                    <th>Coef2</th>
+                    <th>Results2</th>
+                    <th>A</th>
                 </tr>
                 </thead>
 
                 <tbody>
                 <tr ng-repeat="result in results">
-                    <td>[[$index+1]]</td>
-                    <td>[[result.Xn]]</td>
-                    <td>[[result.fx]]</td>
-                    <td>[[result.fPx]]</td>
-                    <td>[[result.Xn1]]</td>
+                    <td>[[result.coef1]]</td>
+                    <td>[[result.res1]]</td>
+                    <td>[[result.coef2]]</td>
+                    <td>[[result.res2]]</td>
+                    <td>[[result.a]]</td>
                 </tr>
                 </tbody>
 
@@ -85,4 +85,3 @@
 
 
 </div>
-

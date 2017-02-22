@@ -26,17 +26,11 @@
 
   function plotController($scope, $location, plotService){
     $scope.plot = {};
-
-    console.log($location.absUrl());
-
     if (!plotService.empty()) {
       $scope.plot = plotService.get();
       var range = [$scope.plot.initRange, $scope.plot.endRange];
       draw($scope.plot.equation, range);
-      //plotService.remove();
-    }else{
-      console.log(plotService.get());
-      console.log('Que mamadas!');
+      plotService.remove();
     }
 
 

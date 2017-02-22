@@ -9,7 +9,7 @@
       }
 
       plot.remove = function(){
-        myPlot = {};
+        myPlot = undefined;
       }
 
       plot.get = function(){
@@ -17,7 +17,7 @@
       }
 
       plot.empty = function(){
-        return angular.equals(plotService.myPlot,{});
+        return angular.equals(myPlot,undefined);
       }
 
       return plot;

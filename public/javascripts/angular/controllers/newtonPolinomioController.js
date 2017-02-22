@@ -10,12 +10,12 @@
 
             var result1 = [];
             var result2 = [];
-            var results = [];
+            $scope.results = [];
 
             var i = 0;
             var j;
             var resulted_num = 0;
-            while(i<=Number($scope.maxIter) && a > math.eval($scope.tolerancia)){
+            do{
                 for(j=0; j<coef1.length; j++){
 
                     if(j == 0){
@@ -24,7 +24,9 @@
                     }else{
                         resulted_num = (Number(result1[j-1])*Number(a))+Number(coef1[j]);
                         result1.push(resulted_num);
-                        if(j != (coef1.length-2)) coef2.push(resulted_num);
+                        if(j < (coef1.length-1)) {
+                          coef2.push(resulted_num);
+                        }
                     }
                 }
                 resulted_num = 0;
@@ -37,16 +39,18 @@
                     }
                 }
                 a = Number(a) - (Number(result1[result1.length-1])/Number(result2[result2.length-1]));
-                results.push({
-                    coef1   : coef1,
-                    coef2   : coef2,
-                    res1    : result1,
-                    res2    : result2,
+                $scope.results.push({
+                    coef1   : coef1.toString(),
+                    coef2   : coef2.toString(),
+                    res1    : result1.toString(),
+                    res2    : result2.toString(),
                     a       : a
                 });
+                coef2 = [];
+                result1 = [];
+                result2 = [];
                 i++;
-            }
-            console.log(results);
+            }while(i<=Number($scope.maxIter) && math.abs(a) < math.eval($scope.tolerancia));
         };
     }
 })();
