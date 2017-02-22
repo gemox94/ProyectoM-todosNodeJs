@@ -1,0 +1,40 @@
+<div class="row" ng-controller="plotController">
+
+  <div class="col m3">
+    <div class="input-field">
+        <input id="equation" type="text" ng-model="plot.equation">
+        <label for="equation">Formula</label>
+    </div>
+
+    <div class="row">
+        <div class="col s6">
+            <div class="input-field">
+                <input id="pointA" type="text" ng-model="plot.initRange">
+                <label for="pointA">Inicio (Rango)</label>
+            </div>
+        </div>
+        <div class="col s6">
+            <div class="input-field">
+                <input id="pointB" type="text" ng-model="plot.endRange">
+                <label for="pointB">Fin (Rango)</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+      <div class="col s12">
+        <a class="waves-effect waves-light btn" ng-click="plot()" style="width: 100%;">Gráficar</a>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col s12">
+        <a href="#" data-activates="slide-out" class="button-collapse waves-effect waves-light btn" style="width: 100%;">Menú</a>
+      </div>
+    </div>
+  </div>
+  <div class="col m8">
+    <div id="plot"></div>
+  </div>
+
+</div>

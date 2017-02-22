@@ -2,7 +2,9 @@
     angular.module('metodos')
         .controller('biseccionController', biseccionController);
 
-    function biseccionController($scope) {
+    function biseccionController($scope, $window, plotService) {
+        console.log(plotService.get());
+
         $scope.calculate = function () {
             var funcA;
             var funcB;
@@ -49,6 +51,18 @@
                 i++;
             }while(i<=Number($scope.maxIter) && (b-a) >= math.eval($scope.tolerancia) && math.abs(resultPM.eval(scopePM)));
         };
+
+        $scope.plot = function(){
+          plotService.add({
+            equation: $scope.formule,
+            initRange: $scope.pointA,
+            endRange: $scope.pointB
+          });
+
+          //$window.location.href = '/plot'
+        };
+
+
 
     }
 })();

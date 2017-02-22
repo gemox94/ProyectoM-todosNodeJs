@@ -31,6 +31,8 @@ router.get('/steffensen',function(req,res,next){
 	res.render('methods/steffensen');
 });
 
-
+router.get('/plot', function(req,res){
+  res.render('plot');
+});
 
 module.exports = router;
